@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import ListItem from './ListItem/ListItem';
+
 
 const ListWrapper = () =>(
     <ul>
@@ -6,6 +8,6 @@ const ListWrapper = () =>(
         <li>list item 2</li>
         <li>list item 3</li>
     </ul>
-)
+);
 
-export default ListWrapper
+export default ListWrapper;

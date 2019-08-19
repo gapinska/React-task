@@ -1,5 +1,6 @@
 .listItem__wrapper {
     list-style: none;
+    padding: 50px 30px;
     padding: 0;
     margin: 0;
     display: flex;
@@ -7,6 +8,8 @@
 }
 
 .listItem__image {
+    flex-shrink: 0;
+    margin-right: 30px; 
     width: 150px;
     height: 150px;
     border-radius: 50%;

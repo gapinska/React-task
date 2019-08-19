@@ -1,12 +1,17 @@
 import React from 'react';
 import ListItem from './ListItem/ListItem';
+import './ListWrapper.css';
+import {twitterAccounts} from '../../data/twitterAccounts`'
 
 
 const ListWrapper = () =>(
-    <ul>
-        <li>list item 1</li>
-        <li>list item 2</li>
-        <li>list item 3</li>
+    <ul className = "listWrapper__wrapper">
+         <ListItem
+            name= {twitterAccounts[0].name}
+            description={twitterAccounts[0].description}
+            image={twitterAccounts[0].image}
+         
+         />
     </ul>
 );
 

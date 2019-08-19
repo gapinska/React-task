@@ -5,7 +5,7 @@ import ListItem from './components/ListWrapper/ListItem/ListItem';
 
 const App = () => (
     <div>
-        <ListItem/>
+        <ListWrapper />
     </div>
 );
 

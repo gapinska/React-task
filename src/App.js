@@ -1,10 +1,12 @@
 import React from 'react';
 import ListWrapper from './components/ListWrapper/ListWrapper';
 import './index.css'
+import MyComponent from './components/MyComponent/MyComponent'
 import ListItem from './components/ListWrapper/ListItem/ListItem';
 
 const App = () => (
     <div>
+        <MyComponent/>
         <ListWrapper />
     </div>
 );

@@ -3,17 +3,22 @@ import './ListItem.css';
 
 
 
-const ListItem = (props) => (
+const ListItem = ({
+    name,
+    description,
+    image,
+    twitterLink
+}) => (
     <li className = "listItem__wrapper" >
         <img 
-            src={props.image} 
+            src={image} 
             className="listItem__image"
-            alt={props.name}
+            alt={name}
             />
         <div>
-            <h2 className= "listItem__name">{props.name}</h2>
-            <p className="listItem__description">{props.description}}</p>
-            <a href={props.link} className="listItem__button ">visit twitter page</button>
+            <h2 className= "listItem__name">{name}</h2>
+            <p className="listItem__description">{description}}</p>
+            <a href={twitterLink} className="listItem__button ">visit twitter page</a >
         </div>
 
     </li>

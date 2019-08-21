@@ -2,28 +2,31 @@ import React from 'react';
 import ListWrapper from './components/ListWrapper/ListWrapper';
 import './index.css';
 import Form from './components/Form/Form';
+import danAbramovImage from './assets/images/danabramov.jpg'
+
+
 
 const initialStateItems = [
     {
-        image: 'https://www.tate.org.uk/art/images/research/2148_10.jpg',
+        image: 'https://d2eip9sf3oo6c2.cloudfront.net/instructors/avatars/000/000/032/original/oapgW_Fp_400x400.jpg',
         name: 'Dan Abramov',
         description: 'Working on @reactjs. The demo guy.',
         twitterLink: 'https://twitter.com/dan_abramov',
     },
     {
-        image: 'https://www.tate.org.uk/art/images/research/2148_10.jpg',
+        image: 'https://avatars3.githubusercontent.com/u/100200?s=460&v=4',
         name: 'Ryan Florence',
         description: 'Making React accessible for users and developers at https://reach.tech . Online learning, workshops, OSS, and consulting.',
         twitterLink: 'https://twitter.com/ryanflorence',
     },
     {
-        image: 'https://www.tate.org.uk/art/images/research/2148_10.jpg',
+        image: 'https://avatars0.githubusercontent.com/u/92839?s=460&v=4',
         name: 'Michael Jackson',
         description: 'Maker. Co-author of React Router. Working on @ReactTraining. Created @unpkg. Head over heels for @cari.',
         twitterLink: 'https://twitter.com/mjackson',
     },
     {
-        image: 'https://www.tate.org.uk/art/images/research/2148_10.jpg',
+        image: 'https://avatars0.githubusercontent.com/u/1500684?s=460&v=4',
         name: 'Kent C. Dodds',
         description: 'Making software development more accessible · Husband, Father, Latter-day Saint, Teacher, OSS, GDE, @TC39 · @PayPalEng @eggheadio @FrontendMasters · #JS',
         twitterLink: 'https://twitter.com/kentcdodds',

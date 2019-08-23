@@ -4,7 +4,7 @@ import styles from "./Form.module.scss";
 const Form = ({ submitFn }) => (
   <div className={styles.wrapper}>
     <h2>Add new twitter account</h2>
-    <form className={styles.form} onSubmit={submitFn}>
+    <form autoComplete="off" className={styles.form} onSubmit={submitFn}>
       <div className={styles.formItem}>
         <input
           className={styles.input}

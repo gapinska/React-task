@@ -12,6 +12,7 @@ const Form = ({ submitFn }) => (
           name="name"
           id="name"
           placeholder=" "
+          required
           maxLength="30"
         />
         <label className={styles.label} htmlFor="name">
@@ -24,6 +25,7 @@ const Form = ({ submitFn }) => (
           className={styles.input}
           type="text"
           name="link"
+          required
           id="link"
           placeholder=" "
         />
@@ -51,6 +53,7 @@ const Form = ({ submitFn }) => (
           name="description"
           id="description"
           placeholder=" "
+          required
         />
         <label className={styles.label} htmlFor="description">
           Description

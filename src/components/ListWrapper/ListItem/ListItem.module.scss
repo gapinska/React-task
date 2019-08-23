@@ -25,6 +25,11 @@
     height: 150px;
     border-radius: 50%;
 }
+.imageNone {
+  @extend .image;
+
+  background: lightgrey;
+}
 
 .name {
     margin: 0;

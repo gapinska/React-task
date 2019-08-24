@@ -13,11 +13,13 @@ const Form = ({ submitFn }) => (
       />
       <Input
         name="link"
-        label="Twitter link"      
+        label="Twitter link"
+        maxLength={30}      
       />
       <Input
         name="image"
         label="Image"
+        maxLength={30}
       />
       <Input
         tag="textarea"

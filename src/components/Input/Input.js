@@ -6,12 +6,13 @@ import styles from './Input.module.scss';
 const Input = ({tag: Tag, name, label, maxLength}) => (
 <div className={styles.formItem}>
         <Tag
-          className={styles.input}
+          className={Tag === 'textarea'? styles.textarea : styles.input}
           type="text"
           name={name}
           id={name}          
           required
           maxLength={maxLength}
+          placeholder= " "
         />
         <label className={styles.label} htmlFor={name}>
           {label}

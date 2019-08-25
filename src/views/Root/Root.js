@@ -4,7 +4,8 @@ import '../../index.css';
 import TwittersView from '../TwitterView/TwitterView';
 import NotesView from '../NotesView/NotesView';
 import ArticlesView from '../ArticlesView/ArticlesView';
-import Navigation from '../../components/Navigation/Navigation'
+import Header from '../../components/Header/Header'
+import HeaderNavigation from '../../components/Header/HeaderNavigation'
 
 
 
@@ -70,7 +71,7 @@ class Root extends React.Component {
         return(
             <BrowserRouter>
             <>
-                <Navigation/>
+                <Header/>
                 <h1>hello world</h1>
                 <Switch>
                     <Route exact path="/" component= {TwittersView} />

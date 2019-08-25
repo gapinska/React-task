@@ -2,14 +2,14 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import styles from './Navigation.module.scss';
 
-const Navigation = () => (
+const nav = () => (
     <nav>
     <ul className={styles.wrapper}>
-        <li className={styles.navigationItem}><NavLink exact activeClassName= {styles.navigationItemLinkActive} className={styles.navigationItemLink} to="/">twitters</NavLink></li>
-        <li className={styles.navigationItem}><NavLink activeClassName= {styles.navigationItemLinkActive} className={styles.navigationItemLink} to="/articles">articles</NavLink></li>
-        <li className={styles.navigationItem}><NavLink activeClassName= {styles.navigationItemLinkActive} className={styles.navigationItemLink} to="/notes">notes</NavLink></li>
+        <li className={styles.navItem}><NavLink exact activeClassName= {styles.navItemLinkActive} className={styles.navItemLink} to="/">twitters</NavLink></li>
+        <li className={styles.navItem}><NavLink activeClassName= {styles.navItemLinkActive} className={styles.navItemLink} to="/articles">articles</NavLink></li>
+        <li className={styles.navItem}><NavLink activeClassName= {styles.navItemLinkActive} className={styles.navItemLink} to="/notes">notes</NavLink></li>
     </ul>
     </nav>
 );
 
-export default Navigation;
+export default nav;

@@ -1,5 +1,9 @@
 import React from 'react';
+import { BrowserRouter, Route } from "react-router-dom";
 import '../../index.css';
+import TwittersView from '../TwitterView/TwitterView';
+import NotesView from '../NotesView/NotesView';
+import ArticlesView from '../ArticlesView/ArticlesView';
 
 
 
@@ -63,9 +67,14 @@ class Root extends React.Component {
 
     render(){
         return(
+            <BrowserRouter>
             <>
                 <h1>hello world</h1>
+                <Route exact path="/" component= {TwittersView} />
+                <Route path="/articles" component= {ArticlesView} />
+                <Route path="/notes" component={NotesView} /> 
             </>
+            </BrowserRouter>
         )
     }
 }

@@ -1,9 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import '../../index.css';
 import TwittersView from '../TwitterView/TwitterView';
 import NotesView from '../NotesView/NotesView';
 import ArticlesView from '../ArticlesView/ArticlesView';
+import Navigation from '../../components/Navigation/Navigation'
 
 
 
@@ -69,10 +70,13 @@ class Root extends React.Component {
         return(
             <BrowserRouter>
             <>
+                <Navigation/>
                 <h1>hello world</h1>
-                <Route exact path="/" component= {TwittersView} />
-                <Route path="/articles" component= {ArticlesView} />
-                <Route path="/notes" component={NotesView} /> 
+                <Switch>
+                    <Route exact path="/" component= {TwittersView} />
+                    <Route path="/articles" component= {ArticlesView} />
+                    <Route path="/notes" component={NotesView} />
+                </Switch> 
             </>
             </BrowserRouter>
         )

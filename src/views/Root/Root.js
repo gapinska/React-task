@@ -6,6 +6,7 @@ import NotesView from '../NotesView/NotesView';
 import ArticlesView from '../ArticlesView/ArticlesView';
 import Header from '../../components/Header/Header'
 import HeaderNavigation from '../../components/Header/HeaderNavigation'
+import Modal from '../../components/Modal/Modal'
 
 
 
@@ -78,6 +79,7 @@ class Root extends React.Component {
                     <Route path="/articles" component= {ArticlesView} />
                     <Route path="/notes" component={NotesView} />
                 </Switch> 
+                <Modal />
             </>
             </BrowserRouter>
         )

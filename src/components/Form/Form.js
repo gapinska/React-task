@@ -10,6 +10,11 @@ const types= {
   note: 'note'
 }
 
+const description = {
+  twitter: 'Twitter account',
+  article: 'Article',
+  note: 'Note'
+}
 
 class Form extends React.Component {
 
@@ -27,7 +32,7 @@ class Form extends React.Component {
   render(){
     return (
     <div className={styles.wrapper}>
-    <Title>Add new twitter account</Title>
+    <Title>Add new {descriptions[this.state.activeOption]}</Title>
     <form autoComplete="off" className={styles.form} onSubmit={this.props.submitFn}>
 
       <input

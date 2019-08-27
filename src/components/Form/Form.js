@@ -4,10 +4,53 @@ import Input from "../Input/Input"
 import Button from '../Button/Button'
 import Title from '../Title/Title'
 
-const Form = ({ submitFn }) => (
-  <div className={styles.wrapper}>
+const types= {
+  twitter: 'twitter',
+  article: 'article',
+  note: 'note'
+}
+
+
+class Form extends React.Component {
+
+  state= {
+    activeOption: types.twitter,
+  }
+
+  handleRadioButtonChange =(type) =>{
+    this.setState({
+      activeOption: type,
+    })
+
+  }
+
+  render(){
+    return (
+    <div className={styles.wrapper}>
     <Title>Add new twitter account</Title>
-    <form autoComplete="off" className={styles.form} onSubmit={submitFn}>
+    <form autoComplete="off" className={styles.form} onSubmit={this.props.submitFn}>
+
+      <input
+      id={types.twitter}
+      type="radio"
+      checked={this.state.activeOption === types.twitter}
+      onChange={() => this.handleRadioButtonChange(types.twitter)}/>
+      <label for={types.twitter}>Twitter</label>
+
+      <input
+      id={types.article}
+      type="radio"
+      checked={this.state.activeOption === types.article}
+      onChange={() => this.handleRadioButtonChange(types.article)}/>
+      <label for={types.article}>Article</label>
+
+      <input
+      id={types.note}
+      type="radio"
+      checked={this.state.activeOption === types.note}
+      onChange={() => this.handleRadioButtonChange(types.note)}/>
+      <label for={types.note}>Note</label>
+
       <Input
         name="name"
         label="Name"
@@ -33,7 +76,11 @@ const Form = ({ submitFn }) => (
      
       
     </form>
-  </div>
-);
+    </div>
+    )
+  }
+}
+  
+
 
 export default Form;

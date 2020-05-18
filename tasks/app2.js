@@ -21,7 +21,15 @@ class App extends React.Component {
     })
   }
 
+  handleBuy = () => {
+    this.setState({
+      availableProducts: this.state.availableProducts - this.state.shoppingCart,
+      shoppingCart: 0,
+    })
+  }
+
   render() {
+    const styleShoppingCart = this.state.shoppingCart === 0 ? { opacity: 0.3 } : {}
     return (
       <>
         <button
@@ -30,17 +38,17 @@ class App extends React.Component {
         >
           -
         </button>
-        <span> {this.state.shoppingCart} </span>
+        <span style={styleShoppingCart}>
+          {this.state.shoppingCart}
+        </span>
         <button
-          disabled={
-            this.state.shoppingCart === this.state.availableProducts
-              ? true
-              : false
-          }
-          onClick={this.handleAddToCart}
-        >
+          disabled={this.state.shoppingCart === this.state.availableProducts ? true : false}
+          onClick={this.handleAddToCart}        >
           +
         </button>
+        {this.state.shoppingCart > 0 && (
+          <button onClick={this.handleBuy}>Buy</button>
+        )}
       </>
     )
   }

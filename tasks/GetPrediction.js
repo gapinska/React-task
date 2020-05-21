@@ -40,6 +40,7 @@ class GetPrediction extends React.Component {
 
     const prediction = predictionPicked.map((prediction) => {
       const predictionText = prediction.text
+
       return predictionText
     })
 
@@ -52,7 +53,7 @@ class GetPrediction extends React.Component {
   render() {
     return (
       <>
-        <button onClick={this.handleShowPrediction}>Wylosuj wróżbę</button>
+        <button onClick={this.handleShowPrediction}>Zobacz wróżbę</button>
         {this.state.predictionPicked ? (
           <ShowPrediction predictionText={this.state.predictionText} />
         ) : null}

@@ -25,18 +25,15 @@ class List extends React.Component {
   }
 
   render() {
-    return (
-      <ul>
-        {this.state.people.map((person) => (
-          <Person
-            key={person.id}
-            id={person.id}
-            name={person.name}
-            delete={this.handleDelete.bind(this, person.id)}
-          />
-        ))}
-      </ul>
-    )
+    const people = this.state.people.map((person) => (
+      <Person
+        key={person.id}
+        id={person.id}
+        name={person.name}
+        delete={this.handleDelete.bind(this, person.id)}
+      />
+    ))
+    return <ul>{people}</ul>
   }
 }
 

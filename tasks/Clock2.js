@@ -63,7 +63,8 @@ class Clock extends React.Component {
     const { hours, minutes, seconds } = this.state.time
     return (
       <>
-        {hours} : {minutes} : {seconds}
+        {hours} : {minutes > 9 ? minutes : "0" + minutes} :
+        {seconds > 9 ? seconds : "0" + seconds}
       </>
     )
   }

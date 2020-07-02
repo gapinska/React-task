@@ -1,33 +1,35 @@
-import React from "react"
-
+import React, { Component } from "react"
+import "./App.css"
 const data = {
   users: [
     {
       id: 1,
-      age: 32,
+      age: 29,
       name: "Arek",
     },
     {
       id: 2,
       age: 28,
-      name: "Ada",
+      name: "Marta",
     },
     {
       id: 3,
-      age: 29,
-      name: "Ala",
+      age: 25,
+      name: "Stasia",
     },
   ],
 }
-const Item = ({ content }) => (
-  <li>{`age: ${content.age}, age: ${content.name}`}</li>
-)
 
-class App extends React.Component {
+const User = ({ content }) => (
+  <li>
+    name: {content.name}, age: {content.age}
+  </li>
+)
+class App extends Component {
   render() {
     const users = data.users
-    const Items = users.map((user, id) => <Item key={user.id} content={user} />)
-    return <ul>{Items}</ul>
+    const Users = users.map((user) => <User key={user.id} content={user} />)
+    return <ul>{Users}</ul>
   }
 }
 
